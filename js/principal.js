@@ -6,7 +6,7 @@ const gradosJSON = `[
   { "nombre": "purpura", "descripcion": "Grado intermedio en el Jiu-Jitsu Basileño: Dominio de una amplia variedad de técnicas, habilidad para adaptarse a diferentes estilos de lucha y una comprensión profunda de las estrategias del BJJ. Mínimo 5 años de entrenamiento." },
   { "nombre": "cafe", "descripcion": "Grado avanzado en el Jiu-Jitsu Basileño: Perfeccionamiento de técnicas avanzadas, capacidad para enseñar y transmitir conocimientos a estudiantes y participación destacada en competiciones de alto nivel. Mínimo 7 años de entrenamiento." },
   { "nombre": "negro", "descripcion": "Grado experto en el Jiu-Jitsu Basileño: Dominio completo del arte, contribución significativa al desarrollo y promoción del BJJ, y reconocimiento por parte de la comunidad. Mínimo 12 años de entrenamiento." },
-  { "nombre": "coral", "descripcion": "Grado maestro en el Jiu-Jitsu Basileño: Reconocimiento excepcional, dedicación de toda una vida al arte y contribución significativa al desarrollo del BJJ. Mínimo 25 años de entrenamiento." }
+  { "nombre": "coral", "descripcion": "Grado maestro en el Jiu-Jitsu Basileño: Reconocimiento excepcional, dedicación de toda una vida al arte y contribución significativa al desarrollo del BJJ. Mínimo 25 años de entrenamiento continuo." }
 ]`;
 
 // Convertir el objeto JSON en un array de objetos JavaScript
