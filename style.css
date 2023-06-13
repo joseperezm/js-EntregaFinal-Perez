@@ -1,0 +1,25 @@
+.resultados {
+    background-color: beige;
+    border: 1px solid darkslategray;
+    border-radius: 5px;
+    color: darkslategray;
+    padding: 5px;
+}
+.resultados:empty {
+    display: none;
+}
+.resultados-entrenar {
+    font-size: medium;
+    background-color: #212529;
+    border: 1px dashed #495057;
+    border-radius: 5px;
+    color: #adb5bd;
+    padding: 10px;
+}
+.resultados-entrenar:empty {
+    display: none;
+}
+.texto-historial {
+    font-size: small;
+    margin-bottom: 0;
+}
