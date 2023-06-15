@@ -44,13 +44,18 @@ formulario.addEventListener("submit", function (event) {
   const gradoActual = formulario.grado.value.toLowerCase();
   const añosEntrenando = parseInt(formulario.años.value);
 
+  // Verificar si algún campo está vacío
+  if (nombre === "" || gradoActual === "" || isNaN(añosEntrenando)) {
+    // Mostrar un mensaje de error o tomar alguna acción apropiada
+    return; // Salir de la función sin guardar los datos
+  }
+
   // Guardar los datos de usuario en el localStorage
   const usuario = { nombre, grado: gradoActual, años: añosEntrenando };
   localStorage.setItem(`usuario-${Date.now()}`, JSON.stringify(usuario));
 
   // Actualizar la lista de últimos usuarios mostrada en el DOM
   mostrarUltimosUsuarios();
-
 });
 
 // Mostrar los últimos usuarios al cargar la página
@@ -66,17 +71,54 @@ botonEliminarHistorial.addEventListener("click", function () {
 
 // Función para eliminar el historial de usuarios
 function eliminarHistorial() {
-  for (let i = localStorage.length - 1; i >= 0; i--) {
-    const key = localStorage.key(i);
-    if (key.startsWith("usuario-")) {
-      localStorage.removeItem(key);
-    }
+  const nombreActual = formulario.nombre.value;
+  const ultimosUsuarios = obtenerUltimosUsuarios();
+
+  if (ultimosUsuarios.length === 0) {
+    swal({
+      title: `${nombreActual}`,
+      content: {
+        element: "div",
+        attributes: {
+          innerHTML: '<strong>No hay usuarios en el historial.</strong>',
+        }
+      },
+      icon: "info",
+      button: "Aceptar",
+    });
+  } else {
+    swal({
+      title: `${nombreActual}`,
+      content: {
+        element: "div",
+        attributes: {
+          innerHTML: '<strong>¿Quieres borrar el historial?</strong>',
+        }
+      },
+      icon: "warning",
+      buttons: ["Cancelar", "Aceptar"],
+    }).then(function (confirmar) {
+      if (confirmar) {
+        for (let i = localStorage.length - 1; i >= 0; i--) {
+          const key = localStorage.key(i);
+          if (key.startsWith("usuario-")) {
+            localStorage.removeItem(key);
+          }
+        }
+        mostrarUltimosUsuarios();
+        swal({
+          title: `${nombreActual}`,
+          content: {
+            element: "div",
+            attributes: {
+              innerHTML: '<strong>¡Historial borrado!</strong>',
+            }
+          },
+          icon: "success",
+          button: false,
+          timer: 2000,
+        });
+      }
+    });
   }
-  swal({
-    title: "Exito",
-    text: "Has borrado el historial",
-    icon: "success",
-    button: "Aceptar",
-  });
-  mostrarUltimosUsuarios();
 }

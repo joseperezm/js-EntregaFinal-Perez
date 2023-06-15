@@ -74,21 +74,21 @@
       <div class="col-md-7">
         <div class="col-md-12">
           <!--- Formulario --->
+          <button class="mb-4 w-100 btn btn-secondary btn-lg" id="botonLogout" style="display: none;">Cerrar sesión - <span id="nombreUsuario"></span></button>
           <form id="formulario">
-            <button class="mb-4 w-100 btn btn-secondary btn-lg" id="botonLogout" style="display: none;">Cerrar sesión - <span id="nombreUsuario"></span></button>
             <div class="row g-4">
               <div class="col-sm-6">
                 <label for="nombreUsuario" class="form-label">Nombre</label>
-                <input type="text" name="nombre" class="form-control" id="nombreUsuario" placeholder="Tu Nombre Aquí..." value="" required>
+                <input type="text" name="nombre" class="form-control" id="nombreUsuario" placeholder="Tu Nombre Aquí..." value="">
               </div>
               <div class="col-sm-6">
                 <label for="añosEntrenando" class="form-label">Años entrenando</label>
-                <input type="number" name="años" class="form-control" id="añosEntrenando" placeholder="¿Cuantos años llevas entrenando?" value="" required>
+                <input type="number" name="años" class="form-control" id="añosEntrenando" placeholder="¿Cuantos años llevas entrenando?" value="">
               </div>
               <div class="col-sm-12">
                 <label for="gradoActual" class="form-label">Grado Actual</label>
-                <select class="form-select" name="grado" required>
-                  <option value="ninguno">Elige Uno...</option>
+                <select class="form-select" name="grado">
+                  <option value="">Elige Uno...</option>
                   <option value="blanco">Blanco</option>
                   <option value="azul">Azul</option>
                   <option value="purpura">Purpura</option>
@@ -109,9 +109,13 @@
           <div class="col-sm-12">
             <input class="form-control" type="text" id="busquedaGrado" placeholder="Ingresa algún grado para buscar...">
           </div>
-          <div class="col-sm-12"><button class="w-100 btn btn-primary btn-lg" id="botonBuscar" type="submit">Buscar</button></div>
-          <div class="col-sm-12"><p class="lead resultados" id="detalle"></p></div>
-        </div>
+          <div class="col-sm-12">
+            <button class="w-100 btn btn-primary btn-lg" id="botonBuscar" type="submit">Buscar</button>
+          </div>
+          <div class="col-sm-12">
+            <p class="lead resultados" id="detalle"></p>
+          </div>
+        </div>        
         <!--- Fin Buscador --->
         <hr class="mb-4">
     </div>
