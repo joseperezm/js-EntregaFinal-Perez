@@ -222,7 +222,7 @@ function buscarGrado(textoBusqueda) {
       content: {
         element: "div",
         attributes: {
-          innerHTML: '<strong>Grado no encontrado...</strong><br><p>Los grados disponibles son: Blanco, Azul, Purpura, Cafe, Negro y Coral.</p>',
+          innerHTML: '<strong>Grado no encontrado...</strong><br><p>Los grados disponibles son:<br>Blanco, Azul, Purpura, Cafe, Negro y Coral.</p>',
         }
       }
     });    
