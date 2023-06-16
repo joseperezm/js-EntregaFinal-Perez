@@ -45,7 +45,7 @@ formulario.addEventListener("submit", function (event) {
   const añosEntrenando = parseInt(formulario.años.value);
 
   // Verificar si algún campo está vacío
-  if (nombre === "" || gradoActual === "" || isNaN(añosEntrenando)) {
+  if (nombre === "" || gradoActual === "" || isNaN(añosEntrenando) || (añosEntrenando < 0 && añosEntrenando !== 0)) {
     // Mostrar un mensaje de error o tomar alguna acción apropiada
     return; // Salir de la función sin guardar los datos
   }

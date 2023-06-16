@@ -79,13 +79,13 @@ formulario.addEventListener("submit", function (event) {
   const gradoActual = formulario.grado.value.toLowerCase();
   const añosEntrenando = parseInt(formulario.años.value);
 
-  if (nombre === "" || gradoActual === "" || isNaN(añosEntrenando)) {
+  if (nombre === "" || gradoActual === "" || isNaN(añosEntrenando) || añosEntrenando < 0) {
     swal({
       content: {
         element: "div",
         attributes: {
-          innerHTML: '<strong>Por favor, completa todos los campos...</strong>',
-        }
+          innerHTML: '<strong>Por favor, completa correctamente todos los campos...</strong>',
+        },
       }, 
       icon: "error",
       button: false,
