@@ -23,3 +23,7 @@
     font-size: small;
     margin-bottom: 0;
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: none!important;
+}

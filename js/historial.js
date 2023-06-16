@@ -80,7 +80,7 @@ function eliminarHistorial() {
       content: {
         element: "div",
         attributes: {
-          innerHTML: '<strong>No hay usuarios en el historial.</strong>',
+          innerHTML: '<strong>No hay usuarios en el historial...</strong>',
         }
       },
       icon: "error",
