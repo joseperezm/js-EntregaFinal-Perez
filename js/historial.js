@@ -83,8 +83,9 @@ function eliminarHistorial() {
           innerHTML: '<strong>No hay usuarios en el historial.</strong>',
         }
       },
-      icon: "info",
-      button: "Aceptar",
+      icon: "error",
+      button: false,
+      timer: 2000,
     });
   } else {
     swal({
