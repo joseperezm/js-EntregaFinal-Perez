@@ -6,5 +6,6 @@
         "puestasol",
         "salidasol",
         "ubicacion"
-    ]
+    ],
+    "editor.maxTokenizationLineLength": 20000
 }
