@@ -20,7 +20,7 @@ function obtenerFraseMotivacional() {
             const fraseTraducida = translationData.responseData.translatedText;
             const fraseElemento = document.getElementById("fraseMotivacional");
             // Actualizar el contenido del elemento en el HTML con la frase traducida y el autor
-            fraseElemento.textContent = `"${fraseTraducida}" - ${autor}`;
+            fraseElemento.innerHTML = `<i>"${fraseTraducida}" - ${autor}</i>`;
           })
           .catch(error => {
             console.error('Error al traducir la frase:', error);
